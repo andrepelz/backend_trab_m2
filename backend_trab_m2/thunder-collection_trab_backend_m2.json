@@ -1,0 +1,747 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "trab_backend_m2",
+    "dateExported": "2023-05-23T00:12:35.441Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "02846cf3-cc29-4767-a5ac-d78e872845ff",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "LoginPost",
+            "url": "http://localhost:3333/api/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-05-22T21:55:21.102Z",
+            "modified": "2023-05-22T21:55:29.942Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"lucasdebatin@univali.br\",\n  \"senha\": \"1234567\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c80a94e5-400d-44e6-ba62-009e568c476e",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "ProprietariosPost",
+            "url": "http://localhost:3333/api/proprietarios",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-05-22T22:00:12.287Z",
+            "modified": "2023-05-22T22:06:34.717Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Nome do Proprietário\",\n  \"email\": \"emailproprietario@example.com\",\n  \"senha\": \"senha123\",\n  \"cpf\": \"12345678900\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "ea73eaa6-c853-41a9-8bdb-fe57f98a2527",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "ProprietariosPut",
+            "url": "http://localhost:3333/api/proprietarios/3",
+            "method": "PUT",
+            "sortNum": 15000,
+            "created": "2023-05-22T22:13:18.449Z",
+            "modified": "2023-05-22T22:19:52.657Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Nome Novo\",\n  \"email\": \"emailnovo@example.com\",\n  \"senha\": \"senhanova\",\n  \"cpf\": \"12345678900\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "8abfe9dc-6e5a-4526-a924-4b24d7f19d48",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "SingUpPost",
+            "url": "http://localhost:3333/api/signup",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-05-22T21:55:34.687Z",
+            "modified": "2023-05-22T21:55:38.911Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Lucas\",\n  \"email\": \"lucasdebatin@univali.br\",\n  \"senha\": \"1234567\",\n  \"cpf\": \"12345678901\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "544eca9f-d327-4c40-bc23-7489295c85af",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "ProprietariosDelete",
+            "url": "http://localhost:3333/api/proprietarios/2",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2023-05-22T22:11:33.416Z",
+            "modified": "2023-05-22T22:12:11.201Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "e4fa5c95-b2ea-46ff-adff-fa91c3750c4c",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "UsuariosPost",
+            "url": "http://localhost:3333/api/usuarios",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-05-22T21:55:52.104Z",
+            "modified": "2023-05-22T21:55:57.720Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"André\",\n  \"email\": \"andre.valim@edu.univali.br\",\n  \"senha\": \"1234567\",\n  \"cpf\": \"2131242141\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "0a7deb6e-92d2-4172-bb56-e5c21cfd6981",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "ProprietariosGetById",
+            "url": "http://localhost:3333/api/proprietarios/3",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-05-22T22:14:05.436Z",
+            "modified": "2023-05-22T22:15:12.910Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "c9544316-0f78-4c3c-858c-01ce6358a11b",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "UsuariosPut",
+            "url": "http://localhost:3333/api/usuarios/5",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-05-22T21:56:01.692Z",
+            "modified": "2023-05-22T21:56:23.609Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Lucas Debatin\",\n  \"email\": \"lucasdebatin@univali.br\",\n  \"senha\": \"\",\n  \"cpf\": \"12345678901\"\n}\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "9e8fb127-9219-485e-b343-712a9192b486",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "ProprietariosGetAll",
+            "url": "http://localhost:3333/api/proprietarios/",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-05-22T22:14:16.911Z",
+            "modified": "2023-05-22T22:14:34.967Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "67121155-2013-4049-9124-9512b22f1ef6",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "UsuariosDelete",
+            "url": "http://localhost:3333/api/usuarios/9",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-05-22T21:56:38.227Z",
+            "modified": "2023-05-22T21:56:41.610Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "ee871f70-a0e0-47c9-ad2d-c29b9da26f38",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "CorretoresPost",
+            "url": "http://localhost:3333/api/corretores/",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-05-22T22:20:48.196Z",
+            "modified": "2023-05-22T22:29:56.805Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Nome do Corretor\",\n  \"email\": \"corretor@email.com\",\n  \"senha\": \"senha123\",\n  \"cpf\": \"12345678902\",\n  \"percentual_comissao\": 10\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "08617987-a306-42a2-9486-83a9b9f75080",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "UsuariosGetById",
+            "url": "http://localhost:3333/api/usuarios/9",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-05-22T21:56:47.356Z",
+            "modified": "2023-05-22T21:56:55.387Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "2bd9afde-fc10-4995-bfbe-665ec2768e14",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "CorretoresPut",
+            "url": "http://localhost:3333/api/corretores/8",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2023-05-22T22:21:21.972Z",
+            "modified": "2023-05-22T22:39:34.207Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Nome do Corretor Novo\",\n  \"email\": \"corretor@email.novo.com\",\n  \"senha\": \"senha123\",\n  \"cpf\": \"12345678902\",\n  \"percentual_comissao\": 20\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "7fd76684-1eaf-4edb-af9c-4a45877f811c",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "UsuariosGetAll",
+            "url": "http://localhost:3333/api/usuarios",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-05-22T21:56:59.745Z",
+            "modified": "2023-05-22T21:57:03.679Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "e8564c5f-16ec-4909-8f41-5dc4b5d2e571",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "CorretoresDelete",
+            "url": "http://localhost:3333/api/corretores/7",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2023-05-22T22:21:35.650Z",
+            "modified": "2023-05-22T22:39:18.832Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "0e36fcbe-6f86-478c-8778-cba1112ea944",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "CorretoresGetById",
+            "url": "http://localhost:3333/api/corretores/8",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-05-22T22:22:32.326Z",
+            "modified": "2023-05-22T22:39:43.010Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "df721bba-33ef-4ec7-b8cb-05b6fa3ae9e7",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "CorretoresGetAll",
+            "url": "http://localhost:3333/api/corretores/",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-05-22T22:22:41.340Z",
+            "modified": "2023-05-22T22:40:05.231Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "aad76736-f4d8-4046-94a2-88ca3dce9e9e",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "ImoveisPost",
+            "url": "http://localhost:3333/api/imoveis",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2023-05-22T22:43:15.123Z",
+            "modified": "2023-05-22T23:28:20.453Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id_proprietario\": 3,\n  \"id_endereco\": 1,\n  \"nome\": \"Nome do Imóvel\",\n  \"tipo\": 2,\n  \"valor\": 150000,\n  \"descricao\": \"Descrição do Imóvel\",\n  \"tamanho\": 100,\n  \"quartos\": 2,\n  \"vagas\": 1,\n  \"banheiros\": 1,\n  \"disponivel\": true,\n  \"path_foto\": \"caminho/para/foto.jpg\",\n  \"id_tags\": [\n    1,\n    2,\n    3\n  ]\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "7bc1f2c0-297f-4733-83fe-bf6db3488eb0",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "ImoveisPut",
+            "url": "http://localhost:3333/api/imoveis/15",
+            "method": "PUT",
+            "sortNum": 110000,
+            "created": "2023-05-22T22:43:22.253Z",
+            "modified": "2023-05-23T00:03:06.045Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id_proprietario\": 3,\n  \"id_endereco\": 1,\n  \"nome\": \"Novo Nome\",\n  \"tipo\": 2,\n  \"valor\": 150000,\n  \"descricao\": \"Descrição do Imóvel\",\n  \"tamanho\": 100,\n  \"quartos\": 2,\n  \"vagas\": 1,\n  \"banheiros\": 1,\n  \"disponivel\": true,\n  \"path_foto\": \"caminho/para/foto.jpg\",\n  \"id_tags\": [\n    1,\n    2,\n    3\n  ]\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "3a754ad1-c9b3-4901-b8a5-c00fd172a7c6",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "ImoveisDelete",
+            "url": "http://localhost:3333/api/imoveis/1",
+            "method": "DELETE",
+            "sortNum": 120000,
+            "created": "2023-05-22T22:43:28.092Z",
+            "modified": "2023-05-22T23:32:20.909Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "e99e8ea1-ce89-4b90-9bc3-8ac084ebd4c8",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "ImoveisGetById",
+            "url": "http://localhost:3333/api/imoveis/15",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2023-05-22T22:43:35.863Z",
+            "modified": "2023-05-23T00:03:08.539Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "9cb39259-159e-4eea-848c-8f9f141a4252",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "ImoveisGetAll",
+            "url": "http://localhost:3333/api/imoveis",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2023-05-22T22:43:44.097Z",
+            "modified": "2023-05-22T23:32:25.231Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "9f44e881-3ed2-4da4-8e75-e569a030f3cd",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "TagsPost",
+            "url": "http://localhost:3333/api/tags/",
+            "method": "POST",
+            "sortNum": 160000,
+            "created": "2023-05-22T22:55:22.888Z",
+            "modified": "2023-05-22T23:27:36.739Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Tag teste\",\n  \"tipo\": false\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "20e9cbb3-1d58-46d0-82a7-1dd27c334843",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "TagsPut",
+            "url": "http://localhost:3333/api/tags/1",
+            "method": "PUT",
+            "sortNum": 170000,
+            "created": "2023-05-22T22:55:32.292Z",
+            "modified": "2023-05-22T23:33:05.651Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Nova tag\",\n  \"tipo\": false\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "dc381b38-c861-4a65-8966-800c78a7fa92",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "TagsDelete",
+            "url": "http://localhost:3333/api/tags/4",
+            "method": "DELETE",
+            "sortNum": 180000,
+            "created": "2023-05-22T22:55:39.138Z",
+            "modified": "2023-05-22T23:33:59.544Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "b0bc74a8-9054-48a9-87cc-a0ce6829d69e",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "TagsGetById",
+            "url": "http://localhost:3333/api/tags/3",
+            "method": "GET",
+            "sortNum": 190000,
+            "created": "2023-05-22T22:55:45.155Z",
+            "modified": "2023-05-22T23:34:07.938Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "157d9db9-bd67-4e27-8d80-45d60a96b8ea",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "TagsGetAll",
+            "url": "http://localhost:3333/api/tags/",
+            "method": "GET",
+            "sortNum": 200000,
+            "created": "2023-05-22T22:55:50.835Z",
+            "modified": "2023-05-22T23:34:12.894Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "0ea404ce-ce95-4c84-8b04-070b1928eada",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "TelefonesPost",
+            "url": "http://localhost:3333/api/telefones",
+            "method": "POST",
+            "sortNum": 210000,
+            "created": "2023-05-22T22:56:06.051Z",
+            "modified": "2023-05-22T23:38:04.569Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id_usuario\": 1,\n  \"numero\": \"123456789\",\n  \"tipo\": 1\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "115f7f96-f77c-4bd3-9541-c5214c695073",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "TelefonesPut",
+            "url": "http://localhost:3333/api/telefones/1",
+            "method": "PUT",
+            "sortNum": 220000,
+            "created": "2023-05-22T22:56:24.581Z",
+            "modified": "2023-05-22T23:38:38.020Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id_usuario\": 3,\n  \"numero\": \"33333333\",\n  \"tipo\": 1\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "f2cc2925-a846-404b-bac1-948d42eab86f",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "TelefonesDelete",
+            "url": "http://localhost:3333/api/telefones/2",
+            "method": "DELETE",
+            "sortNum": 230000,
+            "created": "2023-05-22T22:56:34.520Z",
+            "modified": "2023-05-22T23:39:00.334Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "b2305e83-dd38-4585-a708-f5797c57de03",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "TelefonesGetById",
+            "url": "http://localhost:3333/api/telefones/2",
+            "method": "GET",
+            "sortNum": 240000,
+            "created": "2023-05-22T22:56:42.088Z",
+            "modified": "2023-05-22T23:39:08.831Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "8bc34afe-c657-4192-9bc7-c7e9152e715b",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "TelefonesGetAll",
+            "url": "http://localhost:3333/api/telefones/",
+            "method": "GET",
+            "sortNum": 250000,
+            "created": "2023-05-22T22:56:49.156Z",
+            "modified": "2023-05-22T23:36:23.194Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "04ee3371-101b-4e0b-becd-d94b15c3962f",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "EnderecosPost",
+            "url": "http://localhost:3333/api/enderecos/",
+            "method": "POST",
+            "sortNum": 260000,
+            "created": "2023-05-22T22:56:57.029Z",
+            "modified": "2023-05-22T23:01:22.485Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"numero\": 170,\n  \"cep\": \"1122233\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "d514cb74-36d5-42db-9542-f13c907477e7",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "EnderecosPut",
+            "url": "http://localhost:3333/api/enderecos/2",
+            "method": "PUT",
+            "sortNum": 270000,
+            "created": "2023-05-22T22:57:03.484Z",
+            "modified": "2023-05-22T23:35:15.556Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"numero\":21312312,\n  \"cep\":\"44455213\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "e50df036-5157-4a6f-954b-4afd175925f3",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "EnderecosDelete",
+            "url": "http://localhost:3333/api/enderecos/3",
+            "method": "DELETE",
+            "sortNum": 280000,
+            "created": "2023-05-22T22:57:11.188Z",
+            "modified": "2023-05-22T23:35:30.460Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "ffa5aef4-8b6b-4268-92bc-9750aad2b9a9",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "EnderecosGetById",
+            "url": "http://localhost:3333/api/enderecos/1",
+            "method": "GET",
+            "sortNum": 290000,
+            "created": "2023-05-22T22:57:21.451Z",
+            "modified": "2023-05-22T23:34:37.748Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "453df26d-a7aa-49b0-8545-572b8105390b",
+            "colId": "07c919f3-bf79-442b-b3e4-c9ce436dfa06",
+            "containerId": "",
+            "name": "EnderecosGetAll",
+            "url": "http://localhost:3333/api/enderecos/",
+            "method": "GET",
+            "sortNum": 300000,
+            "created": "2023-05-22T22:57:30.659Z",
+            "modified": "2023-05-22T23:20:44.567Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{access_token}}"
+            },
+            "tests": []
+        }
+    ]
+}
