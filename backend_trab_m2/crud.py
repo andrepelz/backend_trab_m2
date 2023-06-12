@@ -199,6 +199,10 @@ class Imovel(CRUD):
     @staticmethod
     def get_all(db : Session, offset : int, limit : int):
         return BaseCRUD.get_all(db, offset, limit, models.Imovel)
+    
+    @staticmethod
+    def get_by_endereco_id(db : Session, id : int):
+        return db.query(models.Imovel).filter(models.Imovel.id_endereco == id).first()
 
     @staticmethod
     def create(db : Session, imovel : schemas.ImovelCreate):
@@ -213,7 +217,7 @@ class Imovel(CRUD):
             quartos=imovel.quartos,
             vagas=imovel.vagas,
             banheiros=imovel.banheiros,
-            disponivel=imovel.disponivel,
+            disponivel=True,
             path_foto=imovel.path_foto
         )
 
@@ -221,10 +225,11 @@ class Imovel(CRUD):
             db_imovel.proprietario = Imovel._check_member(db, imovel.id_proprietario, Proprietario, exceptions.ProprietarioNotFoundError)
             db_imovel.endereco = Imovel._check_member(db, imovel.id_endereco, Endereco, exceptions.EnderecoNotFoundError)
             db_imovel.tags = [ Tag.get(db, id) for id in imovel.id_tags ]
-        except:
-            raise
-
-        print(db_imovel.__dict__)
+        except exceptions.NotFoundException as e:
+            raise e
+        
+        if Imovel.get_by_endereco_id(db, imovel.id_endereco) is not None:
+            raise exceptions.EnderecoAlreadyTakenError
 
         return BaseCRUD.create(db, imovel, models.Imovel, db_imovel)
 
@@ -234,8 +239,8 @@ class Imovel(CRUD):
         try:
             db_imovel.proprietario = Imovel._check_member(db, imovel.id_proprietario, Proprietario, exceptions.ProprietarioNotFoundError)
             db_imovel.endereco = Imovel._check_member(db, imovel.id_endereco, Endereco, exceptions.EnderecoNotFoundError)
-        except:
-            raise
+        except exceptions.NotFoundException as e:
+            raise e
         
         return BaseCRUD.update(db, db_imovel, imovel)
 
@@ -292,8 +297,8 @@ class Telefone(CRUD):
         db_telefone = models.Telefone(**telefone.dict())
         try:
             db_telefone.usuario = Telefone._check_member(db, telefone.id_usuario, Usuario, exceptions.UsuarioNotFoundError)
-        except:
-            raise
+        except exceptions.NotFoundException as e:
+            raise e
         
         return BaseCRUD.create(db, telefone, models.Telefone, db_telefone)
 
@@ -302,8 +307,8 @@ class Telefone(CRUD):
         db_telefone = Telefone.get(db, id)
         try:
             db_telefone.usuario = Telefone._check_member(db, telefone.id_usuario, Usuario, exceptions.UsuarioNotFoundError)
-        except:
-            raise
+        except exceptions.NotFoundException as e:
+            raise e
         
         return BaseCRUD.update(db, db_telefone, telefone)
 
@@ -361,8 +366,8 @@ class Transacao(CRUD):
         try:
             db_transacao.corretor = Transacao._check_member(db, transacao.id_corretor, Corretor, exceptions.CorretorNotFoundError)
             db_transacao.imovel = Transacao._check_member(db, transacao.id_imovel, Imovel, exceptions.ImovelNotFoundError)
-        except:
-            raise
+        except exceptions.NotFoundException as e:
+            raise e
         
         return BaseCRUD.create(db, transacao, models.Transacao, db_transacao)
 
@@ -372,8 +377,8 @@ class Transacao(CRUD):
         try:
             db_transacao.corretor = Transacao._check_member(db, transacao.id_corretor, Corretor, exceptions.CorretorNotFoundError)
             db_transacao.imovel = Transacao._check_member(db, transacao.id_imovel, Imovel, exceptions.ImovelNotFoundError)
-        except:
-            raise
+        except exceptions.NotFoundException as e:
+            raise e
         
         return BaseCRUD.update(db, db_transacao, transacao)
 

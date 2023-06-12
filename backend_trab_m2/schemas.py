@@ -14,7 +14,6 @@ class UsuarioCreate(UsuarioBase):
 
 class Usuario(UsuarioBase):
     id : int
-
     class Config:
         orm_mode = True
 
@@ -44,7 +43,6 @@ class ProprietarioCreate(UsuarioCreate):
 
 class Proprietario(ProprietarioBase):
     id : int
-
     class Config:
         orm_mode = True
 
@@ -63,7 +61,6 @@ class CorretorCreate(UsuarioCreate):
 
 class Corretor(CorretorBase):
     id : int
-
     class Config:
         orm_mode = True
 
@@ -83,7 +80,6 @@ class TagCreate(TagBase):
 
 class Tag(TagBase):
     id : int
-
     class Config:
         orm_mode = True
 
@@ -103,7 +99,6 @@ class EnderecoCreate(EnderecoBase):
 
 class Endereco(EnderecoBase):
     id : int
-
     class Config:
         orm_mode = True
 
@@ -111,7 +106,7 @@ class PaginatedEndereco(BaseModel):
     limit : int
     offset : int
     data : List['Endereco']
-    
+
     
 
 class ImovelBase(BaseModel):
@@ -125,7 +120,6 @@ class ImovelBase(BaseModel):
     quartos : int
     vagas : int
     banheiros : int
-    disponivel : bool
     path_foto : str
 
 class ImovelCreate(ImovelBase):
@@ -133,10 +127,10 @@ class ImovelCreate(ImovelBase):
 
 class Imovel(ImovelBase):
     id : int
+    disponivel : bool
     proprietario : 'Proprietario' = {}
     endereco : 'Endereco' = {}
     tags : List['Tag'] = list()
-
     class Config:
         orm_mode = True
 
@@ -158,7 +152,6 @@ class TelefoneCreate(TelefoneBase):
 class Telefone(TelefoneBase):
     id : int
     usuario : 'Usuario' = {}
-
     class Config:
         orm_mode = True
 
@@ -182,7 +175,6 @@ class Transacao(TransacaoBase):
     id : int
     corretor : 'Corretor' = {}
     imovel : 'Imovel' = {}
-
     class Config:
         orm_mode = True
 

@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Depends, HTTPException, Body
+from fastapi.encoders import jsonable_encoder
 from sqlalchemy.orm import Session
 from exceptions import *
 from database import get_db, engine
@@ -13,7 +14,7 @@ class BaseREST:
     @staticmethod
     def get(id: int, entity_class: crud.CRUD, exception: Exception, db: Session = Depends(get_db)):
         try:
-            return entity_class.get(db, id)
+            return jsonable_encoder(entity_class.get(db, id))
         except exception as cie:
             raise HTTPException(**cie.__dict__)
 
@@ -26,21 +27,21 @@ class BaseREST:
     @staticmethod
     def create(schema: schemas.BaseModel, entity_class: crud.CRUD, exception: Exception, db: Session = Depends(get_db)):
         try:
-            return entity_class.create(db, schema)
-        except exception as cie:
+            return jsonable_encoder(entity_class.create(db, schema))
+        except Exception as cie:
             raise HTTPException(**cie.__dict__)
 
     @staticmethod
     def update(id: int, schema: schemas.BaseModel, entity_class: crud.CRUD, exception: Exception, db: Session = Depends(get_db)):
         try:
-            return entity_class.update(db, id, schema)
+            return jsonable_encoder(entity_class.update(db, id, schema))
         except exception as cie:
             raise HTTPException(**cie.__dict__)
 
     @staticmethod
     def delete(id: int, entity_class: crud.CRUD, exception: Exception, db: Session = Depends(get_db)):
         try:
-            return entity_class.delete(db, id)
+            return jsonable_encoder(entity_class.delete(db, id))
         except exception as cie:
             raise HTTPException(**cie.__dict__)
 

@@ -58,6 +58,11 @@ class ImovelNotFoundError(ImovelException, NotFoundException):
         self.status_code = 404
         self.detail = "IMOVEL_NAO_ENCONTRADO"
 
+class EnderecoAlreadyTakenError(ImovelException, AlreadyExistException):
+    def __init__(self):
+        self.status_code = 409
+        self.detail = "ENDERECO_JA_VINCULADO_A_OUTRO_IMOVEL"
+
 
 
 class TagException(Exception):
